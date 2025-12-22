@@ -1,0 +1,2138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>[name_file]</name>
+	<open>1</open>
+	<StyleMap id="stylemap_id10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style42</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id24">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style56</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style87</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style92</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style88</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style10">
+		<PolyStyle>
+			<color>e600ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style98</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id49">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id34">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style21</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style76">
+		<PolyStyle>
+			<color>9900ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style23</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style38</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id47">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style75</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style90</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id35">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style19</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style29</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id28">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style85</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style94</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style44</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style95</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style74">
+		<PolyStyle>
+			<color>f200ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style89</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style33">
+		<PolyStyle>
+			<color>ff0097ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style91</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style67</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style26">
+		<PolyStyle>
+			<color>ff0097ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style34</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="Style_2">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style32">
+		<PolyStyle>
+			<color>ff00a1ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id21">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style27">
+		<PolyStyle>
+			<color>ff002eff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style29">
+		<PolyStyle>
+			<color>ff00cdff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style38">
+		<PolyStyle>
+			<color>ff3e0063</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id37">
+			 
+						  
+					   
+			  
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style61</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style68</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style3">
+		<PolyStyle>
+			<color>8c00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style37">
+		<PolyStyle>
+			<color>ff000cff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id29">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style26</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style33</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id0">
+			 
+						  
+					   
+			  
+		 
+							 
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style86</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style71">
+		<PolyStyle>
+						  
+					   
+			  
+		 
+					 
+			 
+			<color>f200ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style14">
+		<PolyStyle>
+			<color>ff00c3ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style0">
+		<PolyStyle>
+			<color>ff1b00bb</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style79">
+		<PolyStyle>
+			<color>b300ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id22">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style39</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style43</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style4">
+		<PolyStyle>
+			<color>b300ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style16">
+		<PolyStyle>
+			<color>ff0049ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style77">
+		<PolyStyle>
+			<color>9900ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id23">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style65</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style53</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style30">
+		<PolyStyle>
+			<color>ff000cff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style">
+		<PolyStyle>
+			<color>ff0086ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style15">
+		<PolyStyle>
+			<color>cc00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="Style_O">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style19">
+		<PolyStyle>
+			<color>ff00cdff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style22">
+		<PolyStyle>
+			<color>ff0026ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style18">
+		<PolyStyle>
+			<color>cc00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style21">
+		<PolyStyle>
+			<color>ff00c3ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style11">
+		<PolyStyle>
+			<color>ff00b2ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style35">
+		<PolyStyle>
+			<color>ff0041ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id43">
+			 
+		 
+		  
+			  
+			  
+			   
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style17</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style5">
+		<PolyStyle>
+			<color>ff2100ac</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+					 
+			 
+		 
+		  
+			  
+			  
+			   
+		 
+					 
+			 
+						  
+					   
+			  
+		 
+					 
+			 
+		 
+		  
+			  
+			  
+			   
+		 
+					 
+			 
+		 
+		  
+			  
+			  
+			   
+		 
+	<Style id="style31">
+		<PolyStyle>
+			<color>ff00a9ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style20">
+		<PolyStyle>
+			<color>ff00a1ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style12">
+		<PolyStyle>
+			<color>ff0052ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id36">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style82</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style80</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style28">
+		<PolyStyle>
+			<color>ff00bbff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style23">
+		<PolyStyle>
+			<color>ff3e0063</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id25">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style81</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style78</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="Style_5">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style70">
+		<PolyStyle>
+			<color>8c00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style8">
+		<PolyStyle>
+			<color>ff1b00bb</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style36">
+		<PolyStyle>
+			<color>ff001dff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="Style_F">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style1">
+		<PolyStyle>
+			<color>8000ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style49">
+		<PolyStyle>
+			<color>ff0015ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style95">
+		<PolyStyle>
+			<color>ff0a00e6</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style83">
+		<PolyStyle>
+			<color>ff00f8ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style62">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff0f00d8</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style59">
+		<PolyStyle>
+			<color>ff007eff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style81">
+		<PolyStyle>
+			<color>ff0075ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style67">
+		<PolyStyle>
+			<color>ff330080</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style56">
+		<PolyStyle>
+			<color>ff006cff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style68">
+		<PolyStyle>
+			<color>ff00deff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style36</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style24</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style98">
+		<PolyStyle>
+			<color>ff2100ac</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style48">
+		<PolyStyle>
+			<color>ff0041ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style24">
+		<PolyStyle>
+			<color>ff001dff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id45">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style69</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style9">
+		<PolyStyle>
+			<color>ff00b2ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id44">
+			 
+						  
+					   
+			  
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style6">
+		<PolyStyle>
+			<color>ff0052ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style52</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style55</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style34">
+		<PolyStyle>
+			<color>ff00a9ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style43">
+		<PolyStyle>
+			<color>ff005aff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style46">
+		<PolyStyle>
+			<color>ff380072</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style25">
+		<PolyStyle>
+			<color>ff0026ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style69">
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="Style_1">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style2">
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="Style_3">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="stylemap_id14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style51</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style49</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style65">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff0063ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style64">
+		<PolyStyle>
+			<color>ff00e7ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style91">
+		<PolyStyle>
+			<color>ff330080</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id38">
+			 
+						  
+					   
+			  
+		 
+							 
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style64</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style63</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style87">
+		<PolyStyle>
+			<color>ff006cff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style52">
+		<PolyStyle>
+			<color>ff0003ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style86">
+		<PolyStyle>
+			<color>8000ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id32">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style44">
+		<PolyStyle>
+			<color>ff0a00e6</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style89">
+		<PolyStyle>
+			<color>ff0049ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style66</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style54</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style73">
+		<PolyStyle>
+			<color>ff2c008f</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style93">
+		<PolyStyle>
+			<color>ff0086ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style78">
+		<PolyStyle>
+			<color>ff0075ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style66">
+		<PolyStyle>
+			<color>ff1500c9</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id42">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style47</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style62</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style53">
+		<PolyStyle>
+			<color>ff0063ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style60">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+							 
+		
+					
+							   
+		 
+		
+					   
+								
+		 
+			
+							  
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff007eff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style80">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff00d5ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style47">
+		<PolyStyle>
+			<color>ff0f00d8</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style82">
+		<PolyStyle>
+			<color>ff00d5ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style85">
+		<PolyStyle>
+			<color>ff008fff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id46">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style79</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style84">
+		<PolyStyle>
+			<color>ff00efff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id27">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style93</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style61">
+		
+					
+								
+		 
+		
+					   
+							   
+		 
+			
+							 
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff00deff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style55">
+		<PolyStyle>
+			<color>ff0003ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style72">
+		<PolyStyle>
+			<color>ff2c008f</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style88">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff0038ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style40">
+		<PolyStyle>
+			<color>ff0400f5</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style54">
+		
+					
+								
+		 
+		
+					   
+							   
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff1500c9</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style17">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>cc00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style51">
+		<PolyStyle>
+			<color>ff0015ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style7">
+		<PolyStyle>
+			<color>cc00ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id41">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style71</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style74</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style90">
+		
+					
+								
+		 
+		
+					   
+							   
+		 
+			
+					 
+		<PolyStyle>
+			<color>a600ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style75">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+							 
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>a600ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id19">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style35</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style48</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style45">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff00f8ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style96">
+		<PolyStyle>
+			<color>ff27009d</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style97">
+		<PolyStyle>
+			<color>ff27009d</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style63">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff00e7ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style41">
+		<PolyStyle>
+			<color>ff00bbff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style94">
+		<PolyStyle>
+			<color>ff008fff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style92">
+		<PolyStyle>
+			<color>ff0038ff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style73</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style72</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style57">
+		
+					
+								
+		 
+		
+					   
+								
+		 
+			
+					 
+		<PolyStyle>
+			<color>ff380072</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="Style_4">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="style39">
+		<PolyStyle>
+			<color>ff005aff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style50">
+		<PolyStyle>
+			<color>ff002eff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id33">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style28</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style41</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style58">
+		<PolyStyle>
+			<color>ff00efff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="style42">
+		<PolyStyle>
+			<color>ff0400f5</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style37</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id39">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style58</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style84</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style22</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id26">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style59</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style32</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="style13">
+		<PolyStyle>
+			<color>e600ffff</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylemap_id48">
+			 
+						  
+					   
+			  
+		 
+					 
+			 
+						  
+					   
+			  
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style77</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style76</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id2">
+			 
+						  
+					   
+			  
+		 
+					 
+			 
+						  
+					   
+			  
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style46</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style57</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style50</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style27</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id40">
+			 
+						  
+					   
+			  
+		 
+					 
+			 
+						  
+					   
+			  
+		 
+							 
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style45</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style83</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="stylemap_id5">
+			 
+						  
+					   
+			  
+		 
+							  
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#style97</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#style96</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>Object ID 12</name>
+		<styleUrl>#stylemap_id0</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_0]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 14</name>
+		<styleUrl>#stylemap_id49</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_1]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 16</name>
+		<styleUrl>#stylemap_id48</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_2]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 18</name>
+		<styleUrl>#stylemap_id47</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_3]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 20</name>
+		<styleUrl>#stylemap_id46</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_4]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 22</name>
+		<styleUrl>#stylemap_id45</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_5]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 24</name>
+		<styleUrl>#stylemap_id44</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_6]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 26</name>
+		<styleUrl>#stylemap_id43</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_7]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 28</name>
+		<styleUrl>#stylemap_id42</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_8]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 30</name>
+		<styleUrl>#stylemap_id41</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_9]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 32</name>
+		<styleUrl>#stylemap_id40</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_10]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 34</name>
+		<styleUrl>#stylemap_id39</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_11]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 36</name>
+		<styleUrl>#stylemap_id38</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_12]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 38</name>
+		<styleUrl>#stylemap_id37</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_13]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 40</name>
+		<styleUrl>#stylemap_id36</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_14]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 42</name>
+		<styleUrl>#stylemap_id35</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_15]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 44</name>
+		<styleUrl>#stylemap_id34</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_16]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 46</name>
+		<styleUrl>#stylemap_id33</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_17]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 48</name>
+		<styleUrl>#stylemap_id32</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_18]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 50</name>
+		<styleUrl>#stylemap_id31</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_19]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 52</name>
+		<styleUrl>#stylemap_id30</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_20]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 54</name>
+		<styleUrl>#stylemap_id29</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_21]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 56</name>
+		<styleUrl>#stylemap_id28</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_22]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 58</name>
+		<styleUrl>#stylemap_id27</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_23]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 60</name>
+		<styleUrl>#stylemap_id26</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_24]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 62</name>
+		<styleUrl>#stylemap_id25</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_25]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 64</name>
+		<styleUrl>#stylemap_id24</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_26]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 66</name>
+		<styleUrl>#stylemap_id23</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_27]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 68</name>
+		<styleUrl>#stylemap_id22</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_28]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 70</name>
+		<styleUrl>#stylemap_id21</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_29]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 72</name>
+		<styleUrl>#stylemap_id20</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_30]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 74</name>
+		<styleUrl>#stylemap_id19</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_31]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 76</name>
+		<styleUrl>#stylemap_id18</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_32]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 78</name>
+		<styleUrl>#stylemap_id17</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_33]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 80</name>
+		<styleUrl>#stylemap_id16</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_34]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 82</name>
+		<styleUrl>#stylemap_id15</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_35]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 84</name>
+		<styleUrl>#stylemap_id14</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_36]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 86</name>
+		<styleUrl>#stylemap_id13</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_37]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 88</name>
+		<styleUrl>#stylemap_id11</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_38]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 90</name>
+		<styleUrl>#stylemap_id10</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_39]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 92</name>
+		<styleUrl>#stylemap_id12</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_40]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 94</name>
+		<styleUrl>#stylemap_id9</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_41]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 96</name>
+		<styleUrl>#stylemap_id8</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_42]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 98</name>
+		<styleUrl>#stylemap_id7</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_43]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 100</name>
+		<styleUrl>#stylemap_id6</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_44]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 102</name>
+		<styleUrl>#stylemap_id5</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_45]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 104</name>
+		<styleUrl>#stylemap_id4</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_46]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 106</name>
+		<styleUrl>#stylemap_id3</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_47]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 108</name>
+		<styleUrl>#stylemap_id2</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_48]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Object ID 110</name>
+		<styleUrl>#stylemap_id1</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						[coord_49]
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>[val_0]</name>
+		<styleUrl>#Style_O</styleUrl>
+		<Point>
+			<coordinates>[point_0]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_1]</name>
+		<styleUrl>#Style_1</styleUrl>
+		<Point>
+			<coordinates>[point_1]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_2]</name>
+		<styleUrl>#Style_2</styleUrl>
+		<Point>
+			<coordinates>[point_2]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_3]</name>
+		<styleUrl>#Style_3</styleUrl>
+		<Point>
+			<coordinates>[point_3]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_4]</name>
+		<styleUrl>#Style_4</styleUrl>
+		<Point>
+			<coordinates>[point_4]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_5]</name>
+		<styleUrl>#Style_5</styleUrl>
+		<Point>
+			<coordinates>[point_5]</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>[val_6]</name>
+		<styleUrl>#Style_F</styleUrl>
+		<Point>
+			<coordinates>[point_6]</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

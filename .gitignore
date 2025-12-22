@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Test files
+teste.CSV
+
+# KML output files
+*.kml
+*.CSV
+*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
