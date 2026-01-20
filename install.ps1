@@ -164,7 +164,7 @@ if not exist ".venv\Scripts\activate.bat" (
 
 REM Activate virtual environment and run the program
 call .venv\Scripts\activate.bat
-python src\tools\GUI.py
+python GUI.py
 
 REM Keep window open if there's an error
 if errorlevel 1 (

@@ -20,7 +20,7 @@ class AppConfig:
     """Application configuration settings."""
     levels: int = 400
     variable: str = 'Odor'
-    zone: str = '32 T'
+    zone: str = '32'
     projin: str = 'utm'
     projout: str = 'WGS84'
     static: bool = False
@@ -54,6 +54,7 @@ class SprayConfig:
     northing_start: int = 4913138
     easting_end: int = 503097
     northing_end: int = 4926569
+    zone : str = '32'
     norm_value: bool = False
     cut_date: bool = False
     date: str = '2024-12-17 15:00'
@@ -83,6 +84,108 @@ class SprayConfig:
 def show_error(parent: Tk | Toplevel, message: str) -> None:
     """Display an error message dialog."""
     messagebox.showerror("Error", message, parent=parent)
+
+
+def save_spray_config_to_file(config: SprayConfig, parent: Tk | Toplevel) -> None:
+    """Save SprayConfig to a JSON file."""
+    filename = filedialog.asksaveasfilename(
+        defaultextension=".json",
+        filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+        title="Save Spray Configuration"
+    )
+    if filename:
+        config_dict = {
+            'specie': config.specie,
+            'level': config.level,
+            'tot_specie': config.tot_specie,
+            'cut_map': config.cut_map,
+            'lat_min': config.lat_min,
+            'lat_max': config.lat_max,
+            'lon_min': config.lon_min,
+            'lon_max': config.lon_max,
+            'easting_start': config.easting_start,
+            'northing_start': config.northing_start,
+            'easting_end': config.easting_end,
+            'northing_end': config.northing_end,
+            'zone': config.zone,
+            'norm_value': config.norm_value,
+            'cut_date': config.cut_date,
+            'date': config.date,
+            'date_after_good': config.date_after_good,
+            'colors': config.colors,
+            'kml_output': config.kml_output,
+            'kml_output_dir': config.kml_output_dir,
+            'scale_output': config.scale_output,
+            'scale_orientation': config.scale_orientation,
+            'multiplier': config.multiplier,
+            'kml_levels': config.kml_levels,
+            'kml_variable': config.kml_variable,
+            'kml_static': config.kml_static,
+            'kml_max_scale': config.kml_max_scale,
+            'kml_min_scale': config.kml_min_scale,
+            'kml_scale': config.kml_scale,
+            'kml_x_shift': config.kml_x_shift,
+            'kml_y_shift': config.kml_y_shift,
+            'kml_x_scale_factor': config.kml_x_scale_factor,
+            'kml_y_scale_factor': config.kml_y_scale_factor
+        }
+        try:
+            with open(filename, 'w') as f:
+                json.dump(config_dict, f, indent=4)
+            messagebox.showinfo("Success", f"Configuration saved to {Path(filename).name}", parent=parent)
+        except Exception as e:
+            show_error(parent, f"Failed to save configuration: {e}")
+
+
+def load_spray_config_from_file(config: SprayConfig, parent: Tk | Toplevel, output: Text) -> None:
+    """Load SprayConfig from a JSON file."""
+    filename = filedialog.askopenfilename(
+        filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+        title="Load Spray Configuration"
+    )
+    if filename:
+        try:
+            with open(filename, 'r') as f:
+                config_dict = json.load(f)
+            
+            config.specie = config_dict.get('specie', 0)
+            config.level = config_dict.get('level', 0)
+            config.tot_specie = config_dict.get('tot_specie', 4)
+            config.cut_map = config_dict.get('cut_map', False)
+            config.lat_min = config_dict.get('lat_min', 44.371366)
+            config.lat_max = config_dict.get('lat_max', 44.492199)
+            config.lon_min = config_dict.get('lon_min', 8.807603)
+            config.lon_max = config_dict.get('lon_max', 9.039093)
+            config.easting_start = config_dict.get('easting_start', 484671)
+            config.northing_start = config_dict.get('northing_start', 4913138)
+            config.easting_end = config_dict.get('easting_end', 503097)
+            config.northing_end = config_dict.get('northing_end', 4926569)
+            config.zone = config_dict.get('zone', '32')
+            config.norm_value = config_dict.get('norm_value', False)
+            config.cut_date = config_dict.get('cut_date', False)
+            config.date = config_dict.get('date', '2024-12-17 15:00')
+            config.date_after_good = config_dict.get('date_after_good', '2024-12-17 15:00')
+            config.colors = config_dict.get('colors', 'log')
+            config.kml_output = config_dict.get('kml_output', True)
+            config.kml_output_dir = config_dict.get('kml_output_dir', 'kml_output')
+            config.scale_output = config_dict.get('scale_output', True)
+            config.scale_orientation = config_dict.get('scale_orientation', 'vertical')
+            config.multiplier = config_dict.get('multiplier', 1.0)
+            config.kml_levels = config_dict.get('kml_levels', 400)
+            config.kml_variable = config_dict.get('kml_variable', 'Spray')
+            config.kml_static = config_dict.get('kml_static', False)
+            config.kml_max_scale = config_dict.get('kml_max_scale', 100)
+            config.kml_min_scale = config_dict.get('kml_min_scale', 0)
+            config.kml_scale = config_dict.get('kml_scale', 1.0)
+            config.kml_x_shift = config_dict.get('kml_x_shift', 0.0)
+            config.kml_y_shift = config_dict.get('kml_y_shift', 0.0)
+            config.kml_x_scale_factor = config_dict.get('kml_x_scale_factor', 1.0)
+            config.kml_y_scale_factor = config_dict.get('kml_y_scale_factor', 1.0)
+            
+            output.insert('end', f'Loaded configuration from {Path(filename).name}\n')
+            messagebox.showinfo("Success", f"Configuration loaded from {Path(filename).name}", parent=parent)
+        except Exception as e:
+            show_error(parent, f"Failed to load configuration: {e}")
 
 
 def process_spray_files(config: SprayConfig, output: Text, root: Tk) -> None:
@@ -127,7 +230,7 @@ def process_spray_files(config: SprayConfig, output: Text, root: Tk) -> None:
                 num_sources = num_species_total // config.tot_specie
                 
                 # Get lat/lon grid from UTM coordinates
-                utm_proj = Proj(proj='utm', zone=32, ellps='WGS84')
+                utm_proj = Proj(proj='utm', zone=int(config.zone), ellps='WGS84')
                 geo_proj = Proj(proj='latlong', datum='WGS84')
                 transformer = Transformer.from_proj(utm_proj, geo_proj)
                 
@@ -215,7 +318,7 @@ def process_spray_files(config: SprayConfig, output: Text, root: Tk) -> None:
                         params = (
                             config.kml_levels,  # levels
                             config.kml_variable,  # variable
-                            '32 T',  # zone (not used for latlong)
+                            config.zone,  # zone (not used for latlong)
                             'latlong',  # projin - geographic coordinates
                             'WGS84',  # projout
                             config.kml_static,  # static
@@ -661,116 +764,185 @@ def open_spray_configuration(root: Tk, config: SprayConfig, output: Text) -> Non
     """Open the Spray configuration window."""
     config.spray_config_window_open = True
     config_window = Toplevel(root)
-    config_window.title('🌫️ Spray Configuration Settings')
-    config_window.geometry("520x700")
+    config_window.title('🌫️ Spray Configuration')
+    config_window.geometry("640x580")
     config_window.configure(bg='#1e1e1e')
     config_window.resizable(False, False)
     
     # Main frame with padding
-    main_frame = Frame(config_window, bg='#1e1e1e', padx=20, pady=18)
+    main_frame = Frame(config_window, bg='#1e1e1e', padx=15, pady=12)
     main_frame.pack(fill='both', expand=True)
     
-    # Header with gradient effect simulation
-    header_frame = Frame(main_frame, bg='#2d2d2d', height=45)
-    header_frame.pack(fill='x', pady=(0, 18))
+    # Header - more compact
+    header_frame = Frame(main_frame, bg='#2d2d2d', height=38)
+    header_frame.pack(fill='x', pady=(0, 10))
     header_frame.pack_propagate(False)
     
     title = Label(
         header_frame,
-        text="🌫️ Spray Configuration Settings",
-        font=('Segoe UI', 12, 'bold'),
+        text="🌫️ Spray Configuration",
+        font=('Segoe UI', 11, 'bold'),
         fg='#64B5F6',
         bg='#2d2d2d'
     )
-    title.pack(pady=10)
+    title.pack(pady=8)
 
-    # Configuration fields with card-like container
-    # Create a canvas and scrollbar for scrolling
-    canvas = Canvas(main_frame, bg='#1e1e1e', highlightthickness=0)
+    # Create scrollable canvas for all fields
+    canvas = Canvas(main_frame, bg='#1e1e1e', highlightthickness=0, height=420)
     scrollbar = ttk.Scrollbar(main_frame, orient='vertical', command=canvas.yview)
-    fields_frame = Frame(canvas, bg='#1e1e1e')
+    fields_container = Frame(canvas, bg='#1e1e1e')
     
-    fields_frame.bind(
-        '<Configure>',
-        lambda e: canvas.configure(scrollregion=canvas.bbox('all'))
-    )
-    
-    canvas.create_window((0, 0), window=fields_frame, anchor='nw')
+    fields_container.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox('all')))
+    canvas.create_window((0, 0), window=fields_container, anchor='nw')
     canvas.configure(yscrollcommand=scrollbar.set)
     
     canvas.pack(side='left', fill='both', expand=True)
     scrollbar.pack(side='right', fill='y')
     
-    fields = [
-        ('Specie (0=NO2, 1=PM10):', str(config.specie)),
-        ('Level:', str(config.level)),
-        ('Total Species:', str(config.tot_specie)),
-        ('Cut Map (True/False):', str(config.cut_map)),
-        ('Lat Min:', str(config.lat_min)),
-        ('Lat Max:', str(config.lat_max)),
-        ('Lon Min:', str(config.lon_min)),
-        ('Lon Max:', str(config.lon_max)),
-        ('Easting Start:', str(config.easting_start)),
-        ('Northing Start:', str(config.northing_start)),
-        ('Easting End:', str(config.easting_end)),
-        ('Northing End:', str(config.northing_end)),
-        ('Normalize Value:', str(config.norm_value)),
-        ('Cut Date:', str(config.cut_date)),
-        ('Start Date (YYYY-MM-DD HH:MM):', config.date),
-        ('Date After Good:', config.date_after_good),
-        ('Colors (norm/log):', config.colors),
-        ('KML Output:', str(config.kml_output)),
-        ('Scale Output:', str(config.scale_output)),
-        ('Scale Orientation:', config.scale_orientation),
-        ('Multiplier:', str(config.multiplier)),
+    # Mouse wheel scrolling
+    def on_mousewheel(event):
+        canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+    canvas.bind_all("<MouseWheel>", on_mousewheel)
+    
+    # Organize fields in compact 2-column layout
+    entries = []
+    
+    # Section 1: Data Selection (compact)
+    section1 = Frame(fields_container, bg='#1e1e1e')
+    section1.pack(fill='x', pady=(0, 8))
+    Label(section1, text="📊 Data Selection", font=('Segoe UI', 9, 'bold'), fg='#81C784', bg='#1e1e1e').pack(anchor='w')
+    
+    grid1 = Frame(section1, bg='#1e1e1e')
+    grid1.pack(fill='x', pady=(4, 0))
+    
+    fields_row1 = [
+        ('Specie:', str(config.specie), 0, 0),
+        ('Level:', str(config.level), 0, 2),
+        ('Total Species:', str(config.tot_specie), 1, 0),
+        ('Zone:', str(config.zone), 1, 2),
     ]
     
-    entries = []
-    for idx, (label_text, default_value) in enumerate(fields):
-        Label(
-            fields_frame, 
-            text=label_text,
-            font=('Segoe UI', 8, 'bold'),
-            fg='#B0B0B0',
-            bg='#1e1e1e'
-        ).grid(row=idx, column=0, sticky='w', pady=5, padx=(0, 12))
-        
-        entry = Entry(fields_frame, width=28, font=('Segoe UI', 9),
-                     bg='#2d2d2d', fg='#E0E0E0', relief='flat',
-                     borderwidth=1, highlightthickness=1,
-                     highlightbackground='#3d3d3d', highlightcolor='#42A5F5',
-                     insertbackground='#E0E0E0')
+    for label_text, default_value, row, col in fields_row1:
+        Label(grid1, text=label_text, font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').grid(row=row, column=col, sticky='w', padx=(0, 4), pady=2)
+        entry = Entry(grid1, width=12, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
         entry.insert(0, default_value)
-        entry.grid(row=idx, column=1, sticky='ew', pady=5)
+        entry.grid(row=row, column=col+1, sticky='ew', padx=(0, 10), pady=2)
         entries.append(entry)
     
-    fields_frame.columnconfigure(1, weight=1)
+    grid1.columnconfigure(1, weight=1)
+    grid1.columnconfigure(3, weight=1)
     
-    # Separator
-    Frame(main_frame, bg='#3d3d3d', height=1).pack(fill='x', pady=10)
+    # Section 2: Map Bounds
+    section2 = Frame(fields_container, bg='#1e1e1e')
+    section2.pack(fill='x', pady=(0, 8))
+    Label(section2, text="🗺️ Map Bounds", font=('Segoe UI', 9, 'bold'), fg='#81C784', bg='#1e1e1e').pack(anchor='w')
     
-    # Folder selection with improved styling
-    folder_container = Frame(main_frame, bg='#1e1e1e')
-    folder_container.pack(fill='x', pady=(0, 10))
+    grid2 = Frame(section2, bg='#1e1e1e')
+    grid2.pack(fill='x', pady=(4, 0))
     
-    Label(
-        folder_container, 
-        text='📁 KML Output Folder:',
-        font=('Segoe UI', 8, 'bold'),
-        fg='#B0B0B0',
-        bg='#1e1e1e'
-    ).pack(anchor='w', pady=(0, 6))
+    fields_row2 = [
+        ('Cut Map:', str(config.cut_map), 0, 0),
+        ('Lat Min:', str(config.lat_min), 0, 2),
+        ('Lat Max:', str(config.lat_max), 1, 0),
+        ('Lon Min:', str(config.lon_min), 1, 2),
+        ('Lon Max:', str(config.lon_max), 2, 0),
+    ]
     
-    folder_frame = Frame(folder_container, bg='#1e1e1e')
-    folder_frame.pack(fill='x')
+    for label_text, default_value, row, col in fields_row2:
+        Label(grid2, text=label_text, font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').grid(row=row, column=col, sticky='w', padx=(0, 4), pady=2)
+        entry = Entry(grid2, width=12, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
+        entry.insert(0, default_value)
+        entry.grid(row=row, column=col+1, sticky='ew', padx=(0, 10), pady=2)
+        entries.append(entry)
     
-    folder_entry = Entry(folder_frame, width=32, font=('Segoe UI', 9),
-                        bg='#2d2d2d', fg='#E0E0E0', relief='flat',
-                        borderwidth=1, highlightthickness=1,
-                        highlightbackground='#3d3d3d', highlightcolor='#42A5F5',
-                        insertbackground='#E0E0E0')
+    grid2.columnconfigure(1, weight=1)
+    grid2.columnconfigure(3, weight=1)
+    
+    # Section 3: UTM Coordinates
+    section3 = Frame(fields_container, bg='#1e1e1e')
+    section3.pack(fill='x', pady=(0, 8))
+    Label(section3, text="📍 UTM Coordinates", font=('Segoe UI', 9, 'bold'), fg='#81C784', bg='#1e1e1e').pack(anchor='w')
+    
+    grid3 = Frame(section3, bg='#1e1e1e')
+    grid3.pack(fill='x', pady=(4, 0))
+    
+    fields_row3 = [
+        ('Easting Start:', str(config.easting_start), 0, 0),
+        ('Northing Start:', str(config.northing_start), 0, 2),
+        ('Easting End:', str(config.easting_end), 1, 0),
+        ('Northing End:', str(config.northing_end), 1, 2),
+    ]
+    
+    for label_text, default_value, row, col in fields_row3:
+        Label(grid3, text=label_text, font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').grid(row=row, column=col, sticky='w', padx=(0, 4), pady=2)
+        entry = Entry(grid3, width=12, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
+        entry.insert(0, default_value)
+        entry.grid(row=row, column=col+1, sticky='ew', padx=(0, 10), pady=2)
+        entries.append(entry)
+    
+    grid3.columnconfigure(1, weight=1)
+    grid3.columnconfigure(3, weight=1)
+    
+    # Section 4: Time & Processing
+    section4 = Frame(fields_container, bg='#1e1e1e')
+    section4.pack(fill='x', pady=(0, 8))
+    Label(section4, text="⏰ Time & Processing", font=('Segoe UI', 9, 'bold'), fg='#81C784', bg='#1e1e1e').pack(anchor='w')
+    
+    grid4 = Frame(section4, bg='#1e1e1e')
+    grid4.pack(fill='x', pady=(4, 0))
+    
+    fields_row4 = [
+        ('Cut Date:', str(config.cut_date), 0, 0),
+        ('Normalize:', str(config.norm_value), 0, 2),
+        ('Start Date:', config.date, 1, 0),
+        ('After Good:', config.date_after_good, 1, 2),
+    ]
+    
+    for label_text, default_value, row, col in fields_row4:
+        Label(grid4, text=label_text, font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').grid(row=row, column=col, sticky='w', padx=(0, 4), pady=2)
+        entry = Entry(grid4, width=12, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
+        entry.insert(0, default_value)
+        entry.grid(row=row, column=col+1, sticky='ew', padx=(0, 10), pady=2)
+        entries.append(entry)
+    
+    grid4.columnconfigure(1, weight=1)
+    grid4.columnconfigure(3, weight=1)
+    
+    # Section 5: Output Settings
+    section5 = Frame(fields_container, bg='#1e1e1e')
+    section5.pack(fill='x', pady=(0, 8))
+    Label(section5, text="🎨 Output Settings", font=('Segoe UI', 9, 'bold'), fg='#81C784', bg='#1e1e1e').pack(anchor='w')
+    
+    grid5 = Frame(section5, bg='#1e1e1e')
+    grid5.pack(fill='x', pady=(4, 0))
+    
+    fields_row5 = [
+        ('Colors:', config.colors, 0, 0),
+        ('Multiplier:', str(config.multiplier), 0, 2),
+        ('KML Output:', str(config.kml_output), 1, 0),
+        ('Scale Output:', str(config.scale_output), 1, 2),
+        ('Orientation:', config.scale_orientation, 2, 0),
+    ]
+    
+    for label_text, default_value, row, col in fields_row5:
+        Label(grid5, text=label_text, font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').grid(row=row, column=col, sticky='w', padx=(0, 4), pady=2)
+        entry = Entry(grid5, width=12, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
+        entry.insert(0, default_value)
+        entry.grid(row=row, column=col+1, sticky='ew', padx=(0, 10), pady=2)
+        entries.append(entry)
+    
+    grid5.columnconfigure(1, weight=1)
+    grid5.columnconfigure(3, weight=1)
+    
+    # Output folder - compact inline
+    folder_frame = Frame(fields_container, bg='#1e1e1e')
+    folder_frame.pack(fill='x', pady=(4, 0))
+    
+    Label(folder_frame, text='📁 Output:', font=('Segoe UI', 7), fg='#B0B0B0', bg='#1e1e1e').pack(side='left', padx=(0, 4))
+    
+    folder_entry = Entry(folder_frame, font=('Segoe UI', 8), bg='#2d2d2d', fg='#E0E0E0', relief='flat', insertbackground='#E0E0E0')
     folder_entry.insert(0, config.kml_output_dir)
-    folder_entry.pack(side='left', fill='x', expand=True, padx=(0, 8))
+    folder_entry.pack(side='left', fill='x', expand=True, padx=(0, 4))
     
     def browse_folder():
         folder = filedialog.askdirectory()
@@ -780,46 +952,35 @@ def open_spray_configuration(root: Tk, config: SprayConfig, output: Text) -> Non
         config_window.lift()
         config_window.focus_force()
     
-    browse_btn = Button(
-        folder_frame, 
-        text="Browse",
-        command=browse_folder,
-        bg='#3d3d3d',
-        fg='#E0E0E0',
-        font=('Segoe UI', 8, 'bold'),
-        relief='flat',
-        padx=15,
-        pady=6,
-        cursor='hand2',
-        activebackground='#4d4d4d',
-        activeforeground='white'
-    )
-    browse_btn.pack(side='left')
+    Button(folder_frame, text="...", command=browse_folder, bg='#3d3d3d', fg='#E0E0E0', 
+           font=('Segoe UI', 7, 'bold'), relief='flat', padx=8, pady=4, cursor='hand2',
+           activebackground='#4d4d4d').pack(side='left')
     
-    # Load button with modern styling
+    # Load config function
     def load_spray_config():
         try:
             config.specie = int(entries[0].get())
             config.level = int(entries[1].get())
             config.tot_specie = int(entries[2].get())
-            config.cut_map = entries[3].get() == 'True'
-            config.lat_min = float(entries[4].get())
-            config.lat_max = float(entries[5].get())
-            config.lon_min = float(entries[6].get())
-            config.lon_max = float(entries[7].get())
-            config.easting_start = int(entries[8].get())
-            config.northing_start = int(entries[9].get())
-            config.easting_end = int(entries[10].get())
-            config.northing_end = int(entries[11].get())
-            config.norm_value = entries[12].get() == 'True'
+            config.zone = entries[3].get()
+            config.cut_map = entries[4].get() == 'True'
+            config.lat_min = float(entries[5].get())
+            config.lat_max = float(entries[6].get())
+            config.lon_min = float(entries[7].get())
+            config.lon_max = float(entries[8].get())
+            config.easting_start = int(entries[9].get())
+            config.northing_start = int(entries[10].get())
+            config.easting_end = int(entries[11].get())
+            config.northing_end = int(entries[12].get())
             config.cut_date = entries[13].get() == 'True'
-            config.date = entries[14].get()
-            config.date_after_good = entries[15].get()
-            config.colors = entries[16].get()
-            config.kml_output = entries[17].get() == 'True'
-            config.scale_output = entries[18].get() == 'True'
-            config.scale_orientation = entries[19].get()
-            config.multiplier = float(entries[20].get())
+            config.norm_value = entries[14].get() == 'True'
+            config.date = entries[15].get()
+            config.date_after_good = entries[16].get()
+            config.colors = entries[17].get()
+            config.multiplier = float(entries[18].get())
+            config.kml_output = entries[19].get() == 'True'
+            config.scale_output = entries[20].get() == 'True'
+            config.scale_orientation = entries[21].get()
             config.kml_output_dir = folder_entry.get()
             config.spray_config_window_open = False
             config_window.destroy()
@@ -827,40 +988,54 @@ def open_spray_configuration(root: Tk, config: SprayConfig, output: Text) -> Non
         except ValueError as e:
             show_error(config_window, f'Invalid value: {e}')
     
+    def update_entries():
+        """Update entry fields with current config values."""
+        entries[0].delete(0, 'end'); entries[0].insert(0, str(config.specie))
+        entries[1].delete(0, 'end'); entries[1].insert(0, str(config.level))
+        entries[2].delete(0, 'end'); entries[2].insert(0, str(config.tot_specie))
+        entries[3].delete(0, 'end'); entries[3].insert(0, str(config.zone))
+        entries[4].delete(0, 'end'); entries[4].insert(0, str(config.cut_map))
+        entries[5].delete(0, 'end'); entries[5].insert(0, str(config.lat_min))
+        entries[6].delete(0, 'end'); entries[6].insert(0, str(config.lat_max))
+        entries[7].delete(0, 'end'); entries[7].insert(0, str(config.lon_min))
+        entries[8].delete(0, 'end'); entries[8].insert(0, str(config.lon_max))
+        entries[9].delete(0, 'end'); entries[9].insert(0, str(config.easting_start))
+        entries[10].delete(0, 'end'); entries[10].insert(0, str(config.northing_start))
+        entries[11].delete(0, 'end'); entries[11].insert(0, str(config.easting_end))
+        entries[12].delete(0, 'end'); entries[12].insert(0, str(config.northing_end))
+        entries[13].delete(0, 'end'); entries[13].insert(0, str(config.cut_date))
+        entries[14].delete(0, 'end'); entries[14].insert(0, str(config.norm_value))
+        entries[15].delete(0, 'end'); entries[15].insert(0, config.date)
+        entries[16].delete(0, 'end'); entries[16].insert(0, config.date_after_good)
+        entries[17].delete(0, 'end'); entries[17].insert(0, config.colors)
+        entries[18].delete(0, 'end'); entries[18].insert(0, str(config.multiplier))
+        entries[19].delete(0, 'end'); entries[19].insert(0, str(config.kml_output))
+        entries[20].delete(0, 'end'); entries[20].insert(0, str(config.scale_output))
+        entries[21].delete(0, 'end'); entries[21].insert(0, config.scale_orientation)
+        folder_entry.delete(0, 'end'); folder_entry.insert(0, config.kml_output_dir)
+    
+    # Separator
+    Frame(main_frame, bg='#3d3d3d', height=1).pack(fill='x', pady=(8, 6))
+    
+    # Compact button row
     button_frame = Frame(main_frame, bg='#1e1e1e')
-    button_frame.pack(fill='x', pady=(10, 0))
+    button_frame.pack(fill='x')
     
-    load_btn = Button(
-        button_frame, 
-        text="✓ Load Configuration",
-        command=load_spray_config,
-        bg='#388E3C',
-        fg='white',
-        font=('Segoe UI', 9, 'bold'),
-        relief='flat',
-        padx=18,
-        pady=8,
-        cursor='hand2',
-        activebackground='#2E7D32',
-        activeforeground='white'
-    )
-    load_btn.pack(side='left', fill='x', expand=True, padx=(0, 6))
+    Button(button_frame, text="💾 Save", command=lambda: save_spray_config_to_file(config, config_window),
+           bg='#1976D2', fg='white', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
+           cursor='hand2', activebackground='#1565C0').pack(side='left', fill='x', expand=True, padx=(0, 3))
     
-    cancel_btn = Button(
-        button_frame,
-        text="Cancel",
-        command=lambda: [setattr(config, 'spray_config_window_open', False), config_window.destroy()],
-        bg='#3d3d3d',
-        fg='#B0B0B0',
-        font=('Segoe UI', 9),
-        relief='flat',
-        padx=15,
-        pady=8,
-        cursor='hand2',
-        activebackground='#4d4d4d',
-        activeforeground='#E0E0E0'
-    )
-    cancel_btn.pack(side='left', padx=(6, 0))
+    Button(button_frame, text="📂 Load", command=lambda: [load_spray_config_from_file(config, config_window, output), update_entries()],
+           bg='#5E35B1', fg='white', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
+           cursor='hand2', activebackground='#512DA8').pack(side='left', fill='x', expand=True, padx=(3, 3))
+    
+    Button(button_frame, text="✓ Apply", command=load_spray_config,
+           bg='#388E3C', fg='white', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
+           cursor='hand2', activebackground='#2E7D32').pack(side='left', fill='x', expand=True, padx=(3, 3))
+    
+    Button(button_frame, text="Cancel", command=lambda: [setattr(config, 'spray_config_window_open', False), config_window.destroy()],
+           bg='#3d3d3d', fg='#B0B0B0', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
+           cursor='hand2', activebackground='#4d4d4d').pack(side='left', fill='x', expand=True, padx=(3, 0))
     
     config_window.focus_set()
 
