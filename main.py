@@ -282,7 +282,7 @@ def write_middle_chuncks(kml_f, poly_list: list[poligoni]):
                 if j < num_pol - 1 and j > 0:
                     a, b = a_b(LAST)
                     LAST = b                    
-                    kml_f.write(f'</coordinates></LinearRing></{a}rBoundaryIs></Polygon><Polygon><{b}BoundaryIs><LinearRing><coordinates>')                
+                    kml_f.write(f'</coordinates></LinearRing></{a}BoundaryIs></Polygon><Polygon><{b}BoundaryIs><LinearRing><coordinates>')                
                 for position in poligon:
                     kml_f.write(f'{position[0]},{position[1]} ')
         
@@ -386,8 +386,6 @@ def make_scale(dx, sx, file_name, MAX_SCALE_DYN = MAX_SCALE):
         val = float(val)
         #scientific notation if the value is too big or too small
         val = f'{val:.2e}' if val > 99 or val < 0.1 else f'{val:.2f}'
-        #     print(val)
-        #val = f'{val:.2e}'
         val = str(val)
         val = val.replace('e+00', '')
         #if val ends with 0, remove it
@@ -401,14 +399,15 @@ def make_scale(dx, sx, file_name, MAX_SCALE_DYN = MAX_SCALE):
         base = base.replace(f'[val_{i}]', val)
         point_str = f'{list_point_x[i]}, {list_point_y[i]}, 0'
         base = base.replace(f'[point_{i}]', point_str)
-    base = base.replace("[name_file]", os.path.basename(file_name).replace('.kml', '_scale.kml'),)
-    with open(file_name.replace('.kml', '_scale.kml'), 'w') as f:
+    base = base.replace("[name_file]", os.path.basename(file_name).replace('.kml', '_scale.kml'))
+    scale_name = str(file_name).replace('.kml', '_scale.kml')
+    with open(scale_name, 'w') as f:
         f.write(base)
 
 def value(max,min,i):
     return round(min + (max - min)*(i/6),6)
 
-def from_csv_to_kml_configurated(csv_file, configuration):
+def from_csv_to_kml_configurated(csv_file, configuration, kml_file_name =None):
     """
     Reads a CSV file and writes a KML file.
 
@@ -469,6 +468,8 @@ def from_csv_to_kml_configurated(csv_file, configuration):
     e_ne = (lim[0],lim[2]) 
     e_nw = (lim[1],lim[2])
     
+    if kml_file_name:
+        kml_file = kml_file_name
 
     with open(kml_file, 'w') as kml_f:
         write_first_chunk(kml_f, lim)
@@ -476,4 +477,5 @@ def from_csv_to_kml_configurated(csv_file, configuration):
         kml_f.write('</Folder>\n')
         kml_f.write('</Document>')
         kml_f.write('</kml>\n')
+
     make_scale(e_ne, e_nw, kml_file, MAX_SCALE_DYN)

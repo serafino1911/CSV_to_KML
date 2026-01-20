@@ -17,6 +17,7 @@ teste.CSV
 *.kml
 *.CSV
 *.csv
+.nc
 
 # IDE
 .vscode/

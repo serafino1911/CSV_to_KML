@@ -1,0 +1,15 @@
+# Core scientific computing
+numpy>=1.24.0
+
+# Data processing
+pandas>=2.0.0
+
+# Geospatial and projection libraries
+pyproj>=3.4.0
+geopy>=2.3.0
+
+# NetCDF file handling
+netCDF4>=1.6.0
+
+# Plotting and visualization
+matplotlib>=3.7.0
