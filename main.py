@@ -452,6 +452,8 @@ def from_csv_to_kml_configurated(csv_file, configuration, kml_file_name =None):
     Y_SHIFT = configuration[14]
     X_SCALE_FACTOR = configuration[15]
     Y_SCALE_FACTOR = configuration[16]
+
+    get_proj()
     
     NAME = os.path.basename(csv_file).split('.')[0]
     if BASE is None:
