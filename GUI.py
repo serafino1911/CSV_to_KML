@@ -137,7 +137,7 @@ def save_spray_config_to_file(config: SprayConfig, parent: Tk | Toplevel) -> Non
             show_error(parent, f"Failed to save configuration: {e}")
 
 
-def load_spray_config_from_file(config: SprayConfig, parent: Tk | Toplevel, output: Text) -> None:
+def load_spray_config_from_file(config: SprayConfig, parent: Tk | Toplevel, output: Text, callback=None) -> None:
     """Load SprayConfig from a JSON file."""
     filename = filedialog.askopenfilename(
         filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
@@ -148,41 +148,47 @@ def load_spray_config_from_file(config: SprayConfig, parent: Tk | Toplevel, outp
             with open(filename, 'r') as f:
                 config_dict = json.load(f)
             
-            config.specie = config_dict.get('specie', 0)
-            config.level = config_dict.get('level', 0)
-            config.tot_specie = config_dict.get('tot_specie', 4)
-            config.cut_map = config_dict.get('cut_map', False)
-            config.lat_min = config_dict.get('lat_min', 44.371366)
-            config.lat_max = config_dict.get('lat_max', 44.492199)
-            config.lon_min = config_dict.get('lon_min', 8.807603)
-            config.lon_max = config_dict.get('lon_max', 9.039093)
-            config.easting_start = config_dict.get('easting_start', 484671)
-            config.northing_start = config_dict.get('northing_start', 4913138)
-            config.easting_end = config_dict.get('easting_end', 503097)
-            config.northing_end = config_dict.get('northing_end', 4926569)
-            config.zone = config_dict.get('zone', '32')
-            config.norm_value = config_dict.get('norm_value', False)
-            config.cut_date = config_dict.get('cut_date', False)
-            config.date = config_dict.get('date', '2024-12-17 15:00')
-            config.date_after_good = config_dict.get('date_after_good', '2024-12-17 15:00')
-            config.colors = config_dict.get('colors', 'log')
-            config.kml_output = config_dict.get('kml_output', True)
-            config.kml_output_dir = config_dict.get('kml_output_dir', 'kml_output')
-            config.scale_output = config_dict.get('scale_output', True)
-            config.scale_orientation = config_dict.get('scale_orientation', 'vertical')
-            config.multiplier = config_dict.get('multiplier', 1.0)
-            config.kml_levels = config_dict.get('kml_levels', 400)
-            config.kml_variable = config_dict.get('kml_variable', 'Spray')
-            config.kml_static = config_dict.get('kml_static', False)
-            config.kml_max_scale = config_dict.get('kml_max_scale', 100)
-            config.kml_min_scale = config_dict.get('kml_min_scale', 0)
-            config.kml_scale = config_dict.get('kml_scale', 1.0)
-            config.kml_x_shift = config_dict.get('kml_x_shift', 0.0)
-            config.kml_y_shift = config_dict.get('kml_y_shift', 0.0)
-            config.kml_x_scale_factor = config_dict.get('kml_x_scale_factor', 1.0)
-            config.kml_y_scale_factor = config_dict.get('kml_y_scale_factor', 1.0)
+            config.specie = config_dict.get('specie', config.specie)
+            config.level = config_dict.get('level', config.level)
+            config.tot_specie = config_dict.get('tot_specie', config.tot_specie)
+            config.cut_map = config_dict.get('cut_map', config.cut_map)
+            config.lat_min = config_dict.get('lat_min', config.lat_min)
+            config.lat_max = config_dict.get('lat_max', config.lat_max)
+            config.lon_min = config_dict.get('lon_min', config.lon_min)
+            config.lon_max = config_dict.get('lon_max', config.lon_max)
+            config.easting_start = config_dict.get('easting_start', config.easting_start)
+            config.northing_start = config_dict.get('northing_start', config.northing_start)
+            config.easting_end = config_dict.get('easting_end', config.easting_end)
+            config.northing_end = config_dict.get('northing_end', config.northing_end)
+            config.zone = config_dict.get('zone', config.zone)
+            config.norm_value = config_dict.get('norm_value', config.norm_value)
+            config.cut_date = config_dict.get('cut_date', config.cut_date)
+            config.date = config_dict.get('date', config.date)
+            config.date_after_good = config_dict.get('date_after_good', config.date_after_good)
+            config.colors = config_dict.get('colors', config.colors)
+            config.kml_output = config_dict.get('kml_output', config.kml_output)
+            config.kml_output_dir = config_dict.get('kml_output_dir', config.kml_output_dir)
+            config.scale_output = config_dict.get('scale_output', config.scale_output)
+            config.scale_orientation = config_dict.get('scale_orientation', config.scale_orientation)
+            config.multiplier = config_dict.get('multiplier', config.multiplier)
+            config.kml_levels = config_dict.get('kml_levels', config.kml_levels)
+            config.kml_variable = config_dict.get('kml_variable', config.kml_variable)
+            config.kml_static = config_dict.get('kml_static', config.kml_static)
+            config.kml_max_scale = config_dict.get('kml_max_scale', config.kml_max_scale)
+            config.kml_min_scale = config_dict.get('kml_min_scale', config.kml_min_scale)
+            config.kml_scale = config_dict.get('kml_scale', config.kml_scale)
+            config.kml_x_shift = config_dict.get('kml_x_shift', config.kml_x_shift)
+            config.kml_y_shift = config_dict.get('kml_y_shift', config.kml_y_shift)
+            config.kml_x_scale_factor = config_dict.get('kml_x_scale_factor', config.kml_x_scale_factor)
+            config.kml_y_scale_factor = config_dict.get('kml_y_scale_factor', config.kml_y_scale_factor)
             
             output.insert('end', f'Loaded configuration from {Path(filename).name}\n')
+            
+            # Call the callback to update GUI entries if provided
+            if callback:
+                callback()
+                parent.update_idletasks()  # Force GUI refresh
+            
             messagebox.showinfo("Success", f"Configuration loaded from {Path(filename).name}", parent=parent)
         except Exception as e:
             show_error(parent, f"Failed to load configuration: {e}")
@@ -1025,7 +1031,7 @@ def open_spray_configuration(root: Tk, config: SprayConfig, output: Text) -> Non
            bg='#1976D2', fg='white', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
            cursor='hand2', activebackground='#1565C0').pack(side='left', fill='x', expand=True, padx=(0, 3))
     
-    Button(button_frame, text="📂 Load", command=lambda: [load_spray_config_from_file(config, config_window, output), update_entries()],
+    Button(button_frame, text="📂 Load", command=lambda: load_spray_config_from_file(config, config_window, output, callback=update_entries),
            bg='#5E35B1', fg='white', font=('Segoe UI', 8, 'bold'), relief='flat', padx=10, pady=6,
            cursor='hand2', activebackground='#512DA8').pack(side='left', fill='x', expand=True, padx=(3, 3))
     
