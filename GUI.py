@@ -37,6 +37,7 @@ class AppConfig:
     y_scale_factor: float = 1.0
     file_list: list[str] = field(default_factory=list)
     config_window_open: bool = False
+    kml_config_window_open: bool = False
 
 
 @dataclass
@@ -641,14 +642,28 @@ def open_configuration(root: Tk, config: AppConfig, output: Text) -> None:
     config_window.focus_set()
 
 
-def open_kml_configuration(root: Tk, config: SprayConfig, output: Text) -> None:
-    """Open the KML parameters configuration window for Spray."""
+def open_kml_configuration(root: Tk, config: AppConfig | SprayConfig, output: Text) -> None:
+    """Open the KML parameters configuration window."""
     config.kml_config_window_open = True
+    prefix = 'kml_' if isinstance(config, SprayConfig) else ''
+
+    def get_setting(name: str):
+        return getattr(config, f'{prefix}{name}')
+
+    def set_setting(name: str, value) -> None:
+        setattr(config, f'{prefix}{name}', value)
+
     kml_window = Toplevel(root)
     kml_window.title('🎨 KML Generation Settings')
     kml_window.geometry("480x520")
     kml_window.configure(bg='#1e1e1e')
     kml_window.resizable(False, False)
+
+    def close_kml_window() -> None:
+        config.kml_config_window_open = False
+        kml_window.destroy()
+
+    kml_window.protocol("WM_DELETE_WINDOW", close_kml_window)
     
     # Main frame with padding
     main_frame = Frame(kml_window, bg='#1e1e1e', padx=20, pady=18)
@@ -673,16 +688,16 @@ def open_kml_configuration(root: Tk, config: SprayConfig, output: Text) -> None:
     fields_frame.pack(fill='both', expand=True)
     
     fields = [
-        ('Levels:', str(config.kml_levels)),
-        ('Variable Name:', config.kml_variable),
-        ('Static Scale (True/False):', str(config.kml_static)),
-        ('Max Scale:', str(config.kml_max_scale)),
-        ('Min Scale:', str(config.kml_min_scale)),
-        ('Scale Factor:', str(config.kml_scale)),
-        ('X Shift:', str(config.kml_x_shift)),
-        ('Y Shift:', str(config.kml_y_shift)),
-        ('X Scale Factor:', str(config.kml_x_scale_factor)),
-        ('Y Scale Factor:', str(config.kml_y_scale_factor)),
+        ('Levels:', str(get_setting('levels'))),
+        ('Variable Name:', get_setting('variable')),
+        ('Static Scale (True/False):', str(get_setting('static'))),
+        ('Max Scale:', str(get_setting('max_scale'))),
+        ('Min Scale:', str(get_setting('min_scale'))),
+        ('Scale Factor:', str(get_setting('scale'))),
+        ('X Shift:', str(get_setting('x_shift'))),
+        ('Y Shift:', str(get_setting('y_shift'))),
+        ('X Scale Factor:', str(get_setting('x_scale_factor'))),
+        ('Y Scale Factor:', str(get_setting('y_scale_factor'))),
     ]
     
     entries = []
@@ -712,16 +727,16 @@ def open_kml_configuration(root: Tk, config: SprayConfig, output: Text) -> None:
     # Load button
     def load_kml_config():
         try:
-            config.kml_levels = int(entries[0].get())
-            config.kml_variable = entries[1].get()
-            config.kml_static = entries[2].get() == 'True'
-            config.kml_max_scale = int(entries[3].get())
-            config.kml_min_scale = int(entries[4].get())
-            config.kml_scale = float(entries[5].get())
-            config.kml_x_shift = float(entries[6].get())
-            config.kml_y_shift = float(entries[7].get())
-            config.kml_x_scale_factor = float(entries[8].get())
-            config.kml_y_scale_factor = float(entries[9].get())
+            set_setting('levels', int(entries[0].get()))
+            set_setting('variable', entries[1].get())
+            set_setting('static', entries[2].get() == 'True')
+            set_setting('max_scale', int(entries[3].get()))
+            set_setting('min_scale', int(entries[4].get()))
+            set_setting('scale', float(entries[5].get()))
+            set_setting('x_shift', float(entries[6].get()))
+            set_setting('y_shift', float(entries[7].get()))
+            set_setting('x_scale_factor', float(entries[8].get()))
+            set_setting('y_scale_factor', float(entries[9].get()))
             config.kml_config_window_open = False
             kml_window.destroy()
             output.insert('end', 'Loaded KML Configuration\n')
@@ -750,7 +765,7 @@ def open_kml_configuration(root: Tk, config: SprayConfig, output: Text) -> None:
     cancel_btn = Button(
         button_frame,
         text="Cancel",
-        command=lambda: [setattr(config, 'kml_config_window_open', False), kml_window.destroy()],
+        command=close_kml_window,
         bg='#3d3d3d',
         fg='#B0B0B0',
         font=('Segoe UI', 9),
@@ -1195,6 +1210,9 @@ def main() -> None:
         if config.config_window_open:
             csv_output.insert('end', 'Configuration open, load configuration first\n')
             return
+        if config.kml_config_window_open:
+            csv_output.insert('end', 'KML configuration open, load configuration first\n')
+            return
             
         if not config.file_list:
             messagebox.showwarning("No Files", "Please select files to process first", parent=root)
@@ -1334,6 +1352,22 @@ def main() -> None:
         activeforeground='white'
     )
     config_btn.pack(side='left', fill='x', expand=True, padx=(6, 0))
+
+    kml_config_btn = Button(
+        csv_button_frame2,
+        text="🎨 KML Settings",
+        command=lambda: open_kml_configuration(root, config, csv_output),
+        bg='#5E35B1',
+        fg='white',
+        font=('Segoe UI', 9, 'bold'),
+        relief='flat',
+        padx=15,
+        pady=9,
+        cursor='hand2',
+        activebackground='#512DA8',
+        activeforeground='white'
+    )
+    kml_config_btn.pack(side='left', fill='x', expand=True, padx=(6, 0))
     
     # =============================================================================
     # SPRAY TAB
