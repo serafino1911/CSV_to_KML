@@ -462,6 +462,7 @@ def from_csv_to_kml_configurated(csv_file, configuration, kml_file_name =None):
         kml_file = os.path.join(BASE, os.path.basename(csv_file).lower().replace('.csv', '.kml'))
 
     timestap = time.time()
+    #timestap = 23
     kml_file = kml_file.replace('.kml', f'_{int(timestap)}.kml')
     dataframe = load_csv_file_conf(csv_file)
     poly, list_x, list_y = dataframe_contures(dataframe)
